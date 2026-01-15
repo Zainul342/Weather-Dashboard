@@ -27,7 +27,7 @@ git push origin main
 1. Go to: **Site settings → Environment variables**
 2. Click **"Add a variable"**
 3. Key: `OPENWEATHER_API_KEY`
-4. Value: `65c3882ca12361ab49e9fdf325479117`
+4. Value: `YOUR_ACTUAL_API_KEY_HERE` (Paste key kamu disini)
 5. Click **"Save"**
 
 ### Step 4: Redeploy
@@ -71,11 +71,35 @@ The app automatically detects the environment (`IS_PRODUCTION`) and switches bet
 
 ## 🛠️ Local Development
 
+**IMPORTANT:** The API key is NOT hardcoded anymore for security.
+
 To test locally:
 
-1. Open `index.html` in browser (Live Server)
-2. It will use the API key in `app.js` (line 10)
-3. Works exactly the same as before
+1. **Create your local config file:**
+   - Copy `js/config.example.js` to `js/config.js`
+   - Edit `js/config.js` and add your actual API key
+
+2. **Open `index.html` in browser** (Live Server)
+
+3. It will work exactly the same as before
+
+**Note:** `js/config.js` is in `.gitignore` so your key won't be committed.
+
+---
+
+## 🔒 Security Summary
+
+### ❌ **BEFORE (Unsafe):**
+
+- API key hardcoded in `app.js`
+- Visible on public GitHub repo
+- Anyone can steal it
+
+### ✅ **NOW (Secure):**
+
+- **Production:** Key in Netlify env variable (hidden)
+- **Locally:** Key in `js/config.js` (gitignored)
+- **GitHub:** NO API key visible
 
 ---
 
@@ -84,3 +108,4 @@ To test locally:
 - Netlify auto-detects `netlify.toml` and `netlify/functions/`
 - Functions will be available at `/.netlify/functions/weather` and `/.netlify/functions/forecast`
 - No npm install needed (Netlify handles it)
+- Branch name is `master` not `main` (use `git push origin master`)

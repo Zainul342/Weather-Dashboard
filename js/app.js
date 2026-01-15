@@ -4,10 +4,18 @@
 */
 
 // API Config - using Netlify serverless functions to hide the key
-// In production, the key is stored in Netlify env variables
-// For local dev, you can still use the key directly (see below)
+// For local development, create a js/config.js file (see config.example.js)
+// DO NOT commit your actual API key to GitHub!
+
 const IS_PRODUCTION = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1'
-const API_KEY = IS_PRODUCTION ? '' : '65c3882ca12361ab49e9fdf325479117' // only used locally
+
+// Try to load local config for development (if it exists)
+let LOCAL_API_KEY = ''
+if (!IS_PRODUCTION && typeof window.CONFIG !== 'undefined') {
+    LOCAL_API_KEY = window.CONFIG.API_KEY
+}
+
+const API_KEY = LOCAL_API_KEY
 const BASE_URL = IS_PRODUCTION ? '/.netlify/functions' : 'https://api.openweathermap.org/data/2.5'
 
 // STATE - keeps track of current settings and cached data
