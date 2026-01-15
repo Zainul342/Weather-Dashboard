@@ -219,9 +219,9 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 5.5 Accessibility Check
 
-- [ ] Alt text untuk weather icons
-- [ ] ARIA labels jika diperlukan
-- [ ] Keyboard accessible
+- [x] Alt text untuk weather icons
+- [x] ARIA labels jika diperlukan
+- [x] Keyboard accessible
 
 ---
 
@@ -229,23 +229,25 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 6.1 Prepare for Deployment
 
-- [ ] Final code cleanup
-- [ ] Pastikan semua paths relative (bukan absolute)
-- [ ] Remove console.log statements (atau gunakan conditional)
-- [ ] API key handling (catatan: di static site ini tetap exposed)
+- [x] Final code cleanup
+- [x] Pastikan semua paths relative (bukan absolute)
+- [x] Remove console.log statements (atau gunakan conditional)
+- [x] API key handling (catatan: di static site ini tetap exposed)
 
 ### 6.2 GitHub Setup
 
-- [ ] Commit semua perubahan
-- [ ] Push ke GitHub repository
-- [ ] Enable GitHub Pages (Settings → Pages → Branch: main)
-- [ ] Verify deployment URL works
+- [x] Commit semua perubahan
+- [x] Push ke GitHub repository
+- [x] Enable GitHub Pages (Settings → Pages → Branch: main)
+- [x] Verify deployment URL works
 
 ### 6.3 Post-Deployment Checks
 
-- [ ] Test live site functionality
-- [ ] Check all API calls work on production
-- [ ] Share URL untuk feedback
+### 6.3 Post-Deployment Checks
+
+- [x] Test live site functionality
+- [x] Check all API calls work on production
+- [x] Share URL untuk feedback
 
 ---
 
@@ -259,13 +261,13 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 7.2 Documentation
 
-- [ ] Update README.md dengan:
-  - [ ] Project description
-  - [ ] Features list
-  - [ ] Screenshot/Demo
-  - [ ] How to run locally
-  - [ ] Tech stack used
-  - [ ] Attributions (OpenWeather, icons, etc.)
+- [x] Update README.md dengan:
+  - [x] Project description
+  - [x] Features list
+  - [x] Screenshot/Demo
+  - [x] How to run locally
+  - [x] Tech stack used
+  - [x] Attributions (OpenWeather, icons, etc.)
 
 ### 7.3 Learning Documentation
 
