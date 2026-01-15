@@ -1,0 +1,9 @@
+# Netlify configuration
+
+[build]
+  # No build command needed for vanilla JS
+  publish = "."
+
+[functions]
+  # Serverless functions directory
+  directory = "netlify/functions"

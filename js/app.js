@@ -3,9 +3,12 @@
   fetches data from OpenWeatherMap, updates the UI
 */
 
-// API Config - yeah the key is exposed, thats ok for this project
-const API_KEY = '65c3882ca12361ab49e9fdf325479117' // swap this with your actual key
-const BASE_URL = 'https://api.openweathermap.org/data/2.5'
+// API Config - using Netlify serverless functions to hide the key
+// In production, the key is stored in Netlify env variables
+// For local dev, you can still use the key directly (see below)
+const IS_PRODUCTION = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1'
+const API_KEY = IS_PRODUCTION ? '' : '65c3882ca12361ab49e9fdf325479117' // only used locally
+const BASE_URL = IS_PRODUCTION ? '/.netlify/functions' : 'https://api.openweathermap.org/data/2.5'
 
 // STATE - keeps track of current settings and cached data
 let currentUnit = localStorage.getItem('unit') || 'metric' // metric = Celsius, imperial = Fahrenheit
@@ -81,7 +84,10 @@ function getWindDirection(degrees) {
 
 // the main fetch function - grabs current weather by city name
 async function fetchWeatherData(city) {
-    const url = `${BASE_URL}/weather?q=${encodeURIComponent(city)}&units=metric&appid=${API_KEY}`
+    // in production, use serverless function. locally, use direct API
+    const url = IS_PRODUCTION
+        ? `${BASE_URL}/weather?city=${encodeURIComponent(city)}`
+        : `${BASE_URL}/weather?q=${encodeURIComponent(city)}&units=metric&appid=${API_KEY}`
 
     try {
         const res = await fetch(url)
@@ -108,7 +114,9 @@ async function fetchWeatherData(city) {
 
 // fetch weather using lat/lon coords (for geolocation)
 async function fetchWeatherByCoords(lat, lon) {
-    const url = `${BASE_URL}/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
+    const url = IS_PRODUCTION
+        ? `${BASE_URL}/weather?lat=${lat}&lon=${lon}`
+        : `${BASE_URL}/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`
 
     try {
         const res = await fetch(url)
@@ -127,7 +135,9 @@ async function fetchWeatherByCoords(lat, lon) {
 
 // fetch 5 day forecast - returns list of weather data
 async function fetchForecast(city) {
-    const url = `${BASE_URL}/forecast?q=${encodeURIComponent(city)}&units=metric&appid=${API_KEY}`
+    const url = IS_PRODUCTION
+        ? `${BASE_URL}/forecast?city=${encodeURIComponent(city)}`
+        : `${BASE_URL}/forecast?q=${encodeURIComponent(city)}&units=metric&appid=${API_KEY}`
 
     try {
         const res = await fetch(url)
