@@ -93,8 +93,8 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 2.2 Architecture.md (Sederhana)
 
-- [ ] Data flow diagram (User → App → API → Response)
-- [ ] Component breakdown (HTML sections)
+- [x] Data flow diagram (User → App → API → Response)
+- [x] Component breakdown (HTML sections)
 
 ### 2.3 Rules.md (Opsional tapi Direkomendasikan)
 
