@@ -98,9 +98,9 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 2.3 Rules.md (Opsional tapi Direkomendasikan)
 
-- [ ] Code style preferences (naming conventions)
-- [ ] Do's & Don'ts untuk project ini
-- [ ] Error handling guidelines
+- [x] Code style preferences (naming conventions)
+- [x] Do's & Don'ts untuk project ini
+- [x] Error handling guidelines
 
 ---
 
