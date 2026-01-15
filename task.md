@@ -21,13 +21,13 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 0.1 IDE & Tools Setup
 
-- [ ] Pastikan VS Code / Antigravity siap digunakan
-- [ ] Install extension: Live Server (untuk development)
-- [ ] Setup folder structure project
+- [x] Pastikan VS Code / Antigravity siap digunakan
+- [x] Install extension: Live Server (untuk development)
+- [x] Setup folder structure project
 
 ### 0.2 Project Initialization
 
-- [ ] Buat struktur folder dasar:
+- [x] Buat struktur folder dasar:
 
   ```
   /weather-dashboard
@@ -43,14 +43,14 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
       └── architecture.md
   ```
 
-- [ ] Initialize Git repository
-- [ ] Buat `.gitignore` (jika perlu)
+- [x] Initialize Git repository
+- [x] Buat `.gitignore` (jika perlu)
 
 ### 0.3 API Setup
 
-- [ ] Daftar akun di [OpenWeatherMap](https://openweathermap.org/api)
-- [ ] Dapatkan API Key (gratis tier cukup)
-- [ ] Test API key dengan simple fetch di browser console
+- [x] Daftar akun di [OpenWeatherMap](https://openweathermap.org/api)
+- [x] Dapatkan API Key (gratis tier cukup)
+- [x] Test API key dengan simple fetch di browser console
 
 ---
 
