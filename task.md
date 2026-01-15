@@ -130,53 +130,59 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 4.1 HTML Structure
 
-- [ ] Buat `index.html` dengan semantic HTML
-- [ ] Header dengan judul app
-- [ ] Search form (input + button)
-- [ ] Main weather display section
-- [ ] Forecast cards section (optional)
-- [ ] Footer
+- [x] Buat `index.html` dengan semantic HTML
+- [x] Header dengan judul app
+- [x] Search form (input + button)
+- [x] Main weather display section
+- [x] Forecast cards section (optional)
+- [x] Footer
 
 ### 4.2 CSS Styling
 
-- [ ] Setup CSS reset/normalization
-- [ ] Buat CSS variables untuk colors, fonts
-- [ ] Style header & search bar
-- [ ] Style weather display (current weather)
-- [ ] Style forecast cards
-- [ ] Responsive design (mobile-first)
-- [ ] Tambahkan animasi/transisi halus
+- [x] Setup CSS reset/normalization
+- [x] Buat CSS variables untuk colors, fonts
+- [x] Style header & search bar
+- [x] Style weather display (current weather)
+- [x] Style forecast cards
+- [x] Responsive design (mobile-first)
+- [x] Tambahkan animasi/transisi halus
 
 ### 4.3 JavaScript - Core Functions
 
-- [ ] Setup API constants (endpoint, API key)
-- [ ] Function: `fetchWeatherData(city)` - get weather by city name
-- [ ] Function: `fetchWeatherByCoords(lat, lon)` - get weather by coordinates
-- [ ] Function: `getCurrentLocation()` - navigator.geolocation
-- [ ] Function: `displayWeatherData(data)` - render ke DOM
-- [ ] Function: `displayError(message)` - show error UI
+- [x] Setup API constants (endpoint, API key)
+- [x] Function: `fetchWeatherData(city)` - get weather by city name
+- [x] Function: `fetchWeatherByCoords(lat, lon)` - get weather by coordinates
+- [x] Function: `getCurrentLocation()` - navigator.geolocation
+- [x] Function: `displayWeatherData(data)` - render ke DOM
+- [x] Function: `displayError(message)` - show error UI
 
 ### 4.4 JavaScript - Event Handlers
 
-- [ ] Search form submission handler
-- [ ] Geolocation button handler (optional)
-- [ ] Keyboard events (Enter to search)
+- [x] Search form submission handler
+- [x] Geolocation button handler (optional)
+- [x] Keyboard events (Enter to search)
 
 ### 4.5 Error Handling
 
-- [ ] Handle: API error responses (404, 401, etc.)
-- [ ] Handle: Network errors (offline, timeout)
-- [ ] Handle: Invalid input (empty search)
-- [ ] Handle: Geolocation denied
-- [ ] User-friendly error messages
+- [x] Handle: API error responses (404, 401, etc.)
+- [x] Handle: Network errors (offline, timeout)
+- [x] Handle: Invalid input (empty search)
+- [x] Handle: Geolocation denied
+- [x] User-friendly error messages
 
 ### 4.6 Nice-to-Have Features (Jika Waktu Cukup)
 
-- [ ] 5-day forecast display
-- [ ] Temperature unit toggle (Celsius/Fahrenheit)
-- [ ] Dark/Light mode toggle
-- [ ] Local storage untuk recent searches
+- [x] 5-day forecast display
+- [x] Temperature unit toggle (Celsius/Fahrenheit)
+- [x] Dark/Light mode toggle
+- [x] Local storage untuk recent searches
 - [ ] Simple chart (suhu per jam) - bisa pakai Chart.js
+
+### 4.7 Security Note (Important)
+
+- [x] Pahami bahwa API Key terekspos di client-side
+- [ ] Baca `architecture.md` bagian Security untuk solusi production
+- [ ] (Opsional) Gunakan `config.js` + `.gitignore` jika ingin menyembunyikan key dari repositori publik
 
 ---
 

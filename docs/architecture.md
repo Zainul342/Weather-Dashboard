@@ -194,6 +194,22 @@ let state = {
 
 When new data comes in, update this object, then call the render function. Keeps a clear separation between data and display.
 
+## 🔒 Security & API Key
+
+Because this is a pure frontend (client-side) app, the API Key is technically "exposed" to anyone who looks at the source code.
+
+**Why this is okay for now:**
+
+- Its a beginner/portfolio project.
+- OpenWeather's free tier has limits, so damage is minimal if someone "steals" it.
+- Its common practice for static sites on GitHub Pages.
+
+**How to fix it for real apps:**
+
+1. **Backend Proxy**: Create a small server (Node.js/Python) that holds the key. The browser asks your server for weather, then your server asks OpenWeather.
+2. **API Restrictions**: Most API providers let you restrict keys to specific domains (e.g., only works on `yourname.github.io`).
+3. **Environment Variables**: Use tools like Vite or Webpack to handle keys, though they still end up in the bundle, its slightly cleaner.
+
 ## Future Considerations
 
 If this project grows, here's what we might add
