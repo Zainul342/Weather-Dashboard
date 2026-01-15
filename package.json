@@ -1,0 +1,26 @@
+{
+  "name": "2.-weather-dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zainul342/2.-Weather-Dashboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zainul342/2.-Weather-Dashboard/issues"
+  },
+  "homepage": "https://github.com/Zainul342/2.-Weather-Dashboard#readme",
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  }
+}
