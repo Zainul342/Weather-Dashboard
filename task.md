@@ -181,8 +181,8 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 ### 4.7 Security Note (Important)
 
 - [x] Pahami bahwa API Key terekspos di client-side
-- [ ] Baca `architecture.md` bagian Security untuk solusi production
-- [ ] (Opsional) Gunakan `config.js` + `.gitignore` jika ingin menyembunyikan key dari repositori publik
+- [x] Baca `architecture.md` bagian Security untuk solusi production
+- [x] (Opsional) Gunakan `config.js` + `.gitignore` jika ingin menyembunyikan key dari repositori publik
 
 ---
 
@@ -190,32 +190,32 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 5.1 Self-Verification Checklist
 
-- [ ] Semua fungsi berjalan tanpa error di console
-- [ ] Fetch API berhasil mendapat data
-- [ ] Data ditampilkan dengan benar
-- [ ] Error handling berfungsi
+- [x] Semua fungsi berjalan tanpa error di console
+- [x] Fetch API berhasil mendapat data
+- [x] Data ditampilkan dengan benar
+- [x] Error handling berfungsi
 
 ### 5.2 Manual Testing Scenarios
 
-- [ ] Test: Search kota valid (contoh: "Jakarta")
-- [ ] Test: Search kota tidak valid (contoh: "xyzabc123")
-- [ ] Test: Search kosong
-- [ ] Test: Geolocation (jika implemented)
-- [ ] Test: Responsif di mobile (DevTools)
-- [ ] Test: Keyboard navigation
+- [x] Test: Search kota valid (contoh: "Jakarta")
+- [x] Test: Search kota tidak valid (contoh: "xyzabc123")
+- [x] Test: Search kosong
+- [x] Test: Geolocation (jika implemented)
+- [x] Test: Responsif di mobile (DevTools)
+- [x] Test: Keyboard navigation
 
 ### 5.3 Browser Testing
 
-- [ ] Test di Chrome
-- [ ] Test di Firefox
-- [ ] Test di mobile browser (Safari/Chrome)
+- [x] Test di Chrome
+- [x] Test di Firefox
+- [x] Test di mobile browser (Safari/Chrome)
 
 ### 5.4 Code Review
 
-- [ ] Review semua JavaScript untuk best practices
-- [ ] Check untuk hardcoded values yang seharusnya configurable
-- [ ] Pastikan tidak ada API key exposed di public repo
-  - [ ] Pertimbangkan proxy server atau environment handling
+- [x] Review semua JavaScript untuk best practices
+- [x] Check untuk hardcoded values yang seharusnya configurable
+- [x] Pastikan tidak ada API key exposed di public repo
+  - [x] Pertimbangkan proxy server atau environment handling
 
 ### 5.5 Accessibility Check
 
