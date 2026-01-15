@@ -4,8 +4,6 @@ Simple weather app I built with Vanilla JS. No frameworks, just clean code and a
 
 ![Weather Dashboard Preview](docs/screenshot.png)
 
-(Note: Dont forget to save your screenshot as `docs/screenshot.png` in the folder so it shows up on GitHub!)
-
 ## What's Inside
 
 Basically it shows you the real-time weather with all the details like humidity, wind speed, and pressure. Also got a 5-day forecast so you know if you need an umbrella later in the week.
