@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Header / Search Section -->
+        <header class="app-header">
+            <div class="logo">
+                <i class="fa-solid fa-cloud-bolt"></i>
+                <h1>Weather Dashboard</h1>
+            </div>
+            <div class="search-container">
+                <i class="fa-solid fa-search search-icon"></i>
+                <input type="text" id="city-input" placeholder="Search City..." autocomplete="off">
+                <button id="search-btn" class="icon-btn">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="header-actions">
+                <button class="icon-btn" title="Current Location" id="location-btn">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="bento-grid">
+
+            <!-- Main Weather Card (Large) -->
+            <section class="card main-card" id="current-weather">
+                <div class="card-header">
+                    <h2 class="city-name">--</h2>
+                    <p class="current-date">--</p>
+                </div>
+                <div class="main-temp-container">
+                    <div class="temp-wrapper">
+                        <span class="main-temp">--</span><span class="unit">°C</span>
+                    </div>
+                    <div class="weather-icon-large">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                </div>
+                <p class="weather-desc">--</p>
+            </section>
+
+            <!-- Highlights Grid (Right Side) -->
+            <div class="highlights-grid">
+                <!-- Humidity -->
+                <div class="card highlight-card">
+                    <p class="card-label">Humidity</p>
+                    <div class="highlight-value">
+                        <i class="fa-solid fa-droplet icon-blue"></i>
+                        <span id="humidity">--%</span>
+                    </div>
+                </div>
+
+                <!-- Wind Status -->
+                <div class="card highlight-card">
+                    <p class="card-label">Wind Speed</p>
+                    <div class="highlight-value">
+                        <i class="fa-solid fa-wind icon-gray"></i>
+                        <span id="wind-speed">-- km/h</span>
+                    </div>
+                </div>
+
+                <!-- UV Index (Mockup for now) -->
+                <div class="card highlight-card">
+                    <p class="card-label">UV Index</p>
+                    <div class="highlight-value">
+                        <i class="fa-solid fa-sun icon-orange"></i>
+                        <span id="uv-index">--</span>
+                    </div>
+                </div>
+
+                <!-- Visibility -->
+                <div class="card highlight-card">
+                    <p class="card-label">Visibility</p>
+                    <div class="highlight-value">
+                        <i class="fa-solid fa-eye icon-indigo"></i>
+                        <span id="visibility">-- km</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Forecast Section (Bottom) -->
+            <section class="card forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div class="forecast-container" id="forecast-container">
+                    <!-- Forecast items will be injected here via JS -->
+                    <div class="forecast-item placeholder">
+                        <p class="day">Tue</p>
+                        <i class="fa-solid fa-cloud-sun"></i>
+                        <p class="temp">25°</p>
+                    </div>
+                    <div class="forecast-item placeholder">
+                        <p class="day">Wed</p>
+                        <i class="fa-solid fa-cloud-rain"></i>
+                        <p class="temp">22°</p>
+                    </div>
+                    <div class="forecast-item placeholder">
+                        <p class="day">Thu</p>
+                        <i class="fa-solid fa-bolt"></i>
+                        <p class="temp">19°</p>
+                    </div>
+                    <div class="forecast-item placeholder">
+                        <p class="day">Fri</p>
+                        <i class="fa-solid fa-sun"></i>
+                        <p class="temp">28°</p>
+                    </div>
+                    <div class="forecast-item placeholder">
+                        <p class="day">Sat</p>
+                        <i class="fa-solid fa-cloud"></i>
+                        <p class="temp">24°</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

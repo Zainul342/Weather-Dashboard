@@ -108,21 +108,21 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 3.1 Design UI (Wireframe/Mockup)
 
-- [ ] Sketch wireframe sederhana (bisa pakai Figma/paper)
-- [ ] Tentukan layout: header, search bar, main display, forecast cards
-- [ ] Pilih color scheme (sesuaikan dengan tema cuaca)
+- [x] Sketch wireframe sederhana (bisa pakai Figma/paper)
+- [x] Tentukan layout: header, search bar, main display, forecast cards
+- [x] Pilih color scheme (sesuaikan dengan tema cuaca)
 
 ### 3.2 User Flow Mapping
 
-- [ ] Flow 1: User buka app → Geolocation → Display cuaca
-- [ ] Flow 2: User ketik city → Search → Display hasil
-- [ ] Flow 3: Error handling (city not found, network error)
+- [x] Flow 1: User buka app → Geolocation → Display cuaca
+- [x] Flow 2: User ketik city → Search → Display hasil
+- [x] Flow 3: Error handling (city not found, network error)
 
 ### 3.3 Component Planning
 
-- [ ] List semua komponen HTML yang dibutuhkan
-- [ ] Plan CSS class naming (BEM atau convention lain)
-- [ ] Plan JavaScript functions/modules
+- [x] List semua komponen HTML yang dibutuhkan
+- [x] Plan CSS class naming (BEM atau convention lain)
+- [x] Plan JavaScript functions/modules
 
 ---
 

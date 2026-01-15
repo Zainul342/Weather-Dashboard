@@ -1,0 +1,363 @@
+/* CSS Variables & Design System */
+:root {
+    /* Colors - Slate Palette */
+    --bg-main: #0f172a;
+    /* Slate 900 */
+    --bg-card: rgba(30, 41, 59, 0.7);
+    /* Slate 800 + Opacity */
+    --bg-card-hover: rgba(51, 65, 85, 0.8);
+    --border-subtle: rgba(255, 255, 255, 0.1);
+
+    /* Text */
+    --text-primary: #f8fafc;
+    /* Slate 50 */
+    --text-secondary: #94a3b8;
+    /* Slate 400 */
+    --text-accent: #38bdf8;
+    /* Sky 400 */
+
+    /* Gradients & Accents */
+    --accent-blue: #3b82f6;
+    --accent-orange: #f97316;
+    --accent-indigo: #6366f1;
+
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+
+    /* Border Radius */
+    --radius-lg: 24px;
+    --radius-md: 16px;
+    --radius-sm: 8px;
+
+    /* Transitions */
+    --transition: all 0.3s ease;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-md);
+    background-image: radial-gradient(circle at top right, #1e293b 0%, #0f172a 60%);
+}
+
+/* App Container */
+.app-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+/* Header */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-md) 0;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo i {
+    color: var(--text-accent);
+}
+
+/* Search Bar */
+.search-container {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 50px;
+    /* Pill shape */
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 1;
+    max-width: 500px;
+    transition: var(--transition);
+}
+
+.search-container:focus-within {
+    border-color: var(--text-accent);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+.search-container input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--text-primary);
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.search-icon {
+    color: var(--text-secondary);
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: var(--transition);
+    display: flex;
+    /* Center icon */
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Bento Grid Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* 2 columns: Main vs Details */
+    gap: var(--spacing-lg);
+}
+
+/* Reusable Card Style - Glassmorphism */
+.card {
+    background: var(--bg-card);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    transition: var(--transition);
+}
+
+.card:hover {
+    background: var(--bg-card-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Weather Card */
+.main-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Add a subtle gradient blob behind main card */
+.main-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    filter: blur(40px);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card-header,
+.main-temp-container,
+.weather-desc {
+    z-index: 1;
+}
+
+.city-name {
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.current-date {
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+}
+
+.main-temp-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: var(--spacing-xl) 0;
+}
+
+.main-temp {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.unit {
+    font-size: 2rem;
+    color: var(--text-secondary);
+    vertical-align: top;
+}
+
+.weather-icon-large {
+    font-size: 5rem;
+    color: var(--accent-orange);
+    /* Default sun color */
+}
+
+.weather-desc {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: var(--text-secondary);
+}
+
+/* Highlights Grid */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+}
+
+.highlight-card {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+}
+
+.card-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.highlight-value {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.icon-blue {
+    color: var(--text-accent);
+}
+
+.icon-gray {
+    color: var(--text-secondary);
+}
+
+.icon-orange {
+    color: var(--accent-orange);
+}
+
+.icon-indigo {
+    color: var(--accent-indigo);
+}
+
+/* Forecast Section */
+.forecast-section {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.forecast-container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    overflow-x: auto;
+    /* Allow scroll on mobile */
+    padding-bottom: 0.5rem;
+}
+
+.forecast-item {
+    background: rgba(255, 255, 255, 0.05);
+    /* Slightly lighter inner card */
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    min-width: 100px;
+}
+
+.forecast-item .day {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.forecast-item i {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+        /* Stack everything */
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Keep 2x2 grid for highlights */
+    }
+
+    .forecast-section {
+        grid-column: span 1;
+    }
+
+    .main-temp {
+        font-size: 4rem;
+    }
+
+    .city-name {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .search-container {
+        max-width: 100%;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        /* Stack highlights on very small screens */
+    }
+}
