@@ -269,3 +269,53 @@ Performant. Ga fetch berlebihan. Pake cache.
 Maintainable. Gampang debug. Gampang tambahin fitur baru.
 
 Ini bedanya junior sama senior. Bukan soal bisa bikin app jalan. Tapi bikin app yang sustainable.
+
+---
+
+## MVP Tech (Start Here)
+
+Gue tau misahin file ke modules (api.js, ui.js) itu agak intimidating kalo belum biasa pake bundler atau server local.
+
+**Solusi Beginner (Single File but Clean)**:
+
+Simpen semua di `app.js` tapi **WAJIB** pake comments buat misahin section. Jangan dicampur aduk.
+
+Struktur `app.js`:
+
+```javascript
+// ====================
+// 1. CONFIGURATION
+// ====================
+const API_KEY = 'YOUR_KEY';
+
+// ====================
+// 2. STATE MANAGEMENT
+// ====================
+let currentWeather = {};
+
+// ====================
+// 3. API FUNCTIONS
+// ====================
+async function fetchWeather(city) {
+    // Basic fetch logic inside try-catch
+}
+
+// ====================
+// 4. UI FUNCTIONS
+// ====================
+function updateUI(data) {
+    // Update DOM elements
+}
+
+// ====================
+// 5. EVENT LISTENERS
+// ====================
+searchBtn.addEventListener('click', () => { ... });
+
+// ====================
+// 6. INIT
+// ====================
+// Start app
+```
+
+Ini jauh lebih maintainable daripada spaghetti code, dan nanti gampang dipisah-pisah kalo skill udah naik.

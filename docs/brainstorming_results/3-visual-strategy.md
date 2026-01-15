@@ -173,3 +173,41 @@ Layout yang ga membosankan. Bento grid dengan hierarchy yang jelas.
 Warna yang ga generic. Dark mode dengan accent yang kontekstual.
 
 Dan yang paling penting, semua harus tetep smooth. 60fps. Load cepat. Jangan sacrifice performance demi estetika.
+
+---
+
+## Edisi Beginner Friendly (MVP Update)
+
+Ide di atas emang keren, tapi bisa bikin pusing kalo baru belajar CSS. Ini versi simplenya yang tetep cakep:
+
+### 1. Simple Dynamic Background
+
+Ganti multiple layers dengan linear-gradient biasa.
+
+* **Cerah**: `background: linear-gradient(to bottom, #FFD700, #FF8C00);` (Kuning ke Orange)
+* **Hujan**: `background: linear-gradient(to bottom, #4B79A1, #283E51);` (Biru ke Gelap)
+* **Malam**: `background: linear-gradient(to bottom, #0F2027, #203A43, #2C5364);`
+
+Ganti class di `<body>` pake JS, CSS nya ngikut.
+
+### 2. Simple Card Layout
+
+Lupain asymmetric bento grid. Pake layout standar aja dulu:
+
+* Header (Search bar)
+* Hero Section (Suhu gede di tengah)
+* Grid 2 kolom atau 3 kolom buat info tambahan (Humidity, Wind, UV).
+
+```css
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+}
+```
+
+Ini jauh lebih gampang di-responsive-in.
+
+### 3. Basic Transparansi (Glass-lite)
+
+Daripada `backdrop-filter: blur`, cukup pake background semi-transparan `rgba(255, 255, 255, 0.1)`. Udah keliatan modern kok di atas background gelap.

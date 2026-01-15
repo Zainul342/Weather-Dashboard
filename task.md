@@ -86,10 +86,10 @@ Dashboard cuaca real-time yang menampilkan informasi cuaca berdasarkan lokasi us
 
 ### 2.1 Buat PRD.md
 
-- [ ] Overview project
-- [ ] User Stories / Use Cases
-- [ ] Tech Stack lengkap
-- [ ] Daftar fitur (MVP vs Nice-to-have)
+- [x] Overview project
+- [x] User Stories / Use Cases
+- [x] Tech Stack lengkap
+- [x] Daftar fitur (MVP vs Nice-to-have)
 
 ### 2.2 Architecture.md (Sederhana)
 

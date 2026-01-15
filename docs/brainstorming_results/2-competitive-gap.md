@@ -82,3 +82,23 @@ Kalo mau project ini keliatan kaya dibuat sama senior engineer, fokus ke tiga ha
 Visual yang ga generic. Interaction yang smooth. Error handling yang mature.
 
 Bukan soal fitur yang banyak. Tapi eksekusi yang polished.
+
+---
+
+## MVP Adjustment - Realita Buat Beginner
+
+Gue tau ide bento grid sama micro-interactions itu kedengeran fancy banget. Tapi buat first step, kita turunin dikit ekspektasinya biar project selesai.
+
+### Yang Wajib (MVP)
+
+1. **Card Grid Biasa**: Ga perlu asymmetric bento. Pake CSS Grid standard 3 kolom aja. Simple, rapi.
+2. **Typography Jelas**: Ga perlu logic font loading yang ribet. Cukup pastiin suhu utama lebih gede dari card lain. Font pake Google Fonts (Inter atau Poppins).
+3. **Basic State**: Hover cursor pointer. Loading text "Please wait...". Error text merah. Udah cukup.
+
+### Yang Nanti Aja (Polish)
+
+* Animasi "tumbuh" pas load angka.
+* Shake animation kalo error.
+* Glassmorphism yang heavy blur.
+
+Better punya grid biasa yang rapi daripada bento grid yang berantakan di mobile.
