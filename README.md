@@ -2,8 +2,9 @@
 
 Simple weather app I built with Vanilla JS. No frameworks, just clean code and a glassmorphism design that looks pretty nice.
 
-![Weather Dashboard Preview](https://github.com/Zainul342/Weather-Dashboard/assets/placeholder/preview.png)
-*(Replace this link with your actual screenshot later)*
+![Weather Dashboard Preview](docs/screenshot.png)
+
+(Note: Dont forget to save your screenshot as `docs/screenshot.png` in the folder so it shows up on GitHub!)
 
 ## What's Inside
 
